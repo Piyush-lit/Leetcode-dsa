@@ -1,20 +1,20 @@
 class Solution {
 public:
     bool isPalindrome(string s) {
-        int left = 0;
-        int right = s.length() - 1;
+        int i = 0;
+        int j = s.length() - 1;
         
-        while (left < right) {
-            if (!isalnum(s[left])) {
-                left++;
-            } else if (!isalnum(s[right])) {
-                right--;
+        while (i < j) {
+            if (!isalnum(s[i])) {
+                i++;
+            } else if (!isalnum(s[j])) {
+                j--;
             } else {
-                if (tolower(s[left]) != tolower(s[right])) {
+                if (tolower(s[i]) != tolower(s[j])) {
                     return false;
                 }
-                left++;
-                right--;
+                i++;
+                j--;
             }
         }
         
