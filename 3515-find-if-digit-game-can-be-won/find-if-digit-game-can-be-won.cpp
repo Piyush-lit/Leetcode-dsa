@@ -13,7 +13,6 @@ public:
         if (sum == sum2) {
             return false;
         }
-
         return true;
     }
 };
